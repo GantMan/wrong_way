@@ -4,8 +4,22 @@ import { CLASSES } from './labels'
 import './App.css'
 import { AILabLocalVideo } from 'ai-lab'
 
+const wrongSide = 0.5
+
 function App() {
   const [model, setModel] = useState(null)
+  const [totalPeople, setTotalPeople] = useState(0)
+  const [dangerPeople, setDangerPeople] = useState(0)
+
+  function checkResults(results, details) {
+    if (!results) return
+    setTotalPeople(results.length)
+
+    const badSpots = details.detections.flatMap((d) =>
+      details.boxes[d][3] > wrongSide ? true : []
+    )
+    setDangerPeople(badSpots.length)
+  }
 
   useEffect(() => {
     tf.loadGraphModel(
@@ -13,21 +27,28 @@ function App() {
     ).then((loadedModel) => setModel(loadedModel))
   }, [])
 
+  const currentStyle = dangerPeople > 0 ? { backgroundColor: 'red' } : {}
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>AI Lab - Wrong Way Detector</h1>
+      <header className="App-header" style={currentStyle}>
+        <h1>AI Lab</h1>
+        <p>
+          Out of {totalPeople} - {dangerPeople} are on the wrong side
+        </p>
         {!model && <p>loading...</p>}
         {model && (
           <AILabLocalVideo
             model={model}
             modelConfig={{
               modelType: 'ssd',
-              labels: CLASSES,
               nmsActive: true,
+              threshold: 0.2,
             }}
+            onInference={checkResults}
+            filter={[0]} // only detect people
             visual
-            src={'/walkers.mov'}
+            perf="simple"
+            src={'/girl.mov'}
           />
         )}
       </header>

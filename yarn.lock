@@ -2500,9 +2500,9 @@ aggregate-error@^3.0.0:
     indent-string "^4.0.0"
 
 ai-lab@^0.0.2-alpha.2:
-  version "0.0.2-alpha.3"
-  resolved "https://registry.yarnpkg.com/ai-lab/-/ai-lab-0.0.2-alpha.3.tgz#df8720a7265a0402a4481f840fb6a26e87643fe4"
-  integrity sha512-Aa+z9rv3j2XdHwM8CraKDr7lXvFQtay3kNWDZMaoN0QGsmdwod7LDQc6Q6oT0/7mQctfFlyTbpb9XWjJLnpsMA==
+  version "0.0.2-alpha.4"
+  resolved "https://registry.yarnpkg.com/ai-lab/-/ai-lab-0.0.2-alpha.4.tgz#3c841c9dba2a8f6865eb58d0a41d1329a8e939e2"
+  integrity sha512-WnpwIaMMPnCfEfqQs+8yLkebQrPwnSvGRR8dqoLQ1iNtRCdMHC6o31zzDzIvpYD0ysZDMucyG5MTrb1M12PXPA==
   dependencies:
     "@tensorflow/tfjs" "^3.13.0"
     "@tensorflow/tfjs-core" "^3.13.0"
