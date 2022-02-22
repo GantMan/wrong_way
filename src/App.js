@@ -31,10 +31,11 @@ function App() {
   return (
     <div className="App">
       <header className="App-header" style={currentStyle}>
-        <h1>AI Lab</h1>
+        <h1>AI-Lab</h1>
         <p>
           Out of {totalPeople} - {dangerPeople} are on the wrong side
         </p>
+        <div className="divider"></div>
         {!model && <p>loading...</p>}
         {model && (
           <AILabLocalVideo

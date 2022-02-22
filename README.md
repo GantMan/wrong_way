@@ -1,6 +1,8 @@
 # Wrong Way
 
-A simple project using create-react-app and AI-LAB to detect people going the wrong way. This simulates computer vision for airport security.
+A simple project using create-react-app and AI-LAB to detect people in zones they should not be in.
+
+![wrong way demo](_art/wrong_side.gif)
 
 # Getting Started with Create React App
 
