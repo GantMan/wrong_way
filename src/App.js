@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
 import * as tf from '@tensorflow/tfjs'
-import { CLASSES } from './labels'
 import './App.css'
 import { AILabLocalVideo } from 'ai-lab'
 
