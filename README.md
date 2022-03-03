@@ -74,3 +74,9 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `yarn build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+# Want to learn TensorFlow.js?  
+## Get Gant's Learning TensorFlow.js book from O'Reilly Media!
+
+<a href="https://t.co/GAes8CtWpj"><img src="_art/staind_glass_TFJS.jpg" width=600 /></a>
+
